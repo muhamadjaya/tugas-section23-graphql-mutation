@@ -9,13 +9,3 @@ export const GET_TODOLIST = gql`
     }
   }
 `;
-
-export const GET_TODOLIST_BY_ID = gql`
-  query getTodolistById($id: Int!) {
-    todolist(where: { id: { _eq: $id } }) {
-      id
-      title
-      is_done
-    }
-  }
-`;

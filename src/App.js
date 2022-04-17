@@ -35,7 +35,7 @@ const TodoList = () => {
         refetch();
       },
       onError: (error) => {
-        console.log("Error in mutation insert", { error });
+        console.log("Error in mutation update", { error });
       },
     }
   );
@@ -47,7 +47,7 @@ const TodoList = () => {
         refetch();
       },
       onError: (error) => {
-        console.log("Error in mutation insert", { error });
+        console.log("Error in mutation delete", { error });
       },
     }
   );
@@ -97,7 +97,7 @@ const TodoList = () => {
     <>
       <div className="container">
         <h1 className="app-title">todos</h1>
-        {loading || loadingUpdate || loadingDelete || loadingInsert ? (
+        {loading || loadingInsert || loadingUpdate || loadingDelete ? (
           <LoadingSvg />
         ) : (
           <>
